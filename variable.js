@@ -41,3 +41,33 @@ console.log(age);
 const daysInWeek = 7;
 const maxNumber = 5;
 // mutable - let / immutable - const
+
+// 4. Variable types
+// primitive, single item: number, string, boolean, null, undefined, symbol
+// object, box container
+// function, first-class function
+
+const count = 17; // integer
+const size = 17.1; // decimal number
+console.log(`value: ${count}, type: ${typeof count}`);
+console.log(`value: ${size}, type: ${typeof size}`);
+
+// number - special numeric values: infinity, -infinity, NaN(Not a Number)
+const infinity = 1 / 0;
+const negativeInfinity = -1 / 0;
+const nAn = "not a number" / 2;
+console.log(infinity);
+console.log(negativeInfinity);
+console.log(nAn);
+
+// bigInt (fairly new, don't use it yet)
+const bigInt = 1234567890123456789012345678901234567890n;
+console.log(`value: ${bigInt}, type: ${typeof bigInt}`);
+
+// string
+const char = "c";
+const brendan = "brendan";
+const greeting = "hello " + brendan;
+console.log(`value: ${greeting}, type: ${typeof greeting}`);
+const helloBob = `hi ${brendan}!`; // template literals (string)
+console.log(`value: ${helloBob}, type: ${typeof helloBob}`);
