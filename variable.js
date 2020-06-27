@@ -71,3 +71,31 @@ const greeting = "hello " + brendan;
 console.log(`value: ${greeting}, type: ${typeof greeting}`);
 const helloBob = `hi ${brendan}!`; // template literals (string)
 console.log(`value: ${helloBob}, type: ${typeof helloBob}`);
+
+// boolean
+// false: 0, null, undefined, NaN, ''
+// true: any other value
+const canRead = true;
+const test = 3 < 1; // false
+console.log(`value: ${canRead}, type: ${typeof canRead}`);
+console.log(`value: ${test}, type: ${typeof test}`);
+
+// null
+let nothing = null;
+console.log(`value: ${nothing}, type: ${typeof nothing}`);
+
+// undefined
+// 선언은 되었지만 값이 지정되지 않음
+let x;
+console.log(`value: ${x}, type: ${typeof x}`);
+
+// symbol, create unique identifiers for objects
+// 자료구조에서 고유한 식별자, 동시다발 코드에서 우선순위
+const symbol1 = Symbol("id");
+const symbol2 = Symbol("id");
+console.log(symbol1 === symbol2);
+
+const gSymbole1 = Symbol.for("id");
+const gSymbole2 = Symbol.for("id");
+console.log(gSymbole1 === gSymbole2); // true
+console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
