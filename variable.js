@@ -99,3 +99,25 @@ const gSymbole1 = Symbol.for("id");
 const gSymbole2 = Symbol.for("id");
 console.log(gSymbole1 === gSymbole2); // true
 console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
+
+// object, real-life object, data structure
+const hyeyeon = { name: "hyeyeon", age: 26 };
+// const라 hyeyeon은 변경할 수 없지만(한번 할당된 object 말고 다른 object로 할당 불가)
+// hyeyeon.name / hyeyeon.age는 변경 가능
+hyeyeon.age = 11;
+
+// 5. Dynamic typing: dynamically typed language
+// 선언할 때가 아니라(java, c 등은 선언할 때 타입 선언)
+// 런타임(프로그램이 동작할 때) 할당된 값을 따라 타입이 변경됨
+let text = "hello";
+console.log(text.charAt(0)); // h 출력
+console.log(`value: ${text}, type: ${typeof text}`);
+text = 1;
+console.log(`value: ${text}, type: ${typeof text}`);
+text = "7" + 5;
+console.log(`value: ${text}, type: ${typeof text}`);
+text = "8" / "2";
+console.log(`value: ${text}, type: ${typeof text}`);
+console.log(text.charAt(0)); // <= 위험(다이나믹 타이핑의 단점)
+// type script의 출현
+// type script는 trans compiler를 사용해야 함(babel)
