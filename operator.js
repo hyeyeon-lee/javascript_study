@@ -60,12 +60,14 @@ console.log(`and: ${value1 || value2 || check()}`);
 
 // often used to compress long if-statement
 // nummableObject && nullableObject.something
+const nummableObject = null;
 if (nummableObject != null) {
   nummableObject.something;
 }
 
 // ! (not)
-console.log(!value);
+const value3 = true;
+console.log(!value3);
 
 function check() {
   for (let i = 0; i < 10; i++) {
@@ -74,3 +76,35 @@ function check() {
   }
   return true;
 }
+
+// 7. Equality
+// 웬만하면 === (strict) 사용
+const stringFive = "5";
+const numberFive = 5;
+
+console.log("equality");
+
+// == loose equality, with type conversion
+console.log(stringFive == numberFive);
+console.log(stringFive != numberFive);
+
+// === strict equality, no type conversion
+console.log(stringFive === numberFive);
+console.log(stringFive !== numberFive);
+
+// object equality by reference
+const hyeyeon1 = { name: "hyeyeon" };
+const hyeyeon2 = { name: "hyeyeon" };
+const hyeyeon3 = hyeyeon1;
+console.log(hyeyeon1 == hyeyeon2);
+console.log(hyeyeon1 === hyeyeon2);
+console.log(hyeyeon1 === hyeyeon3);
+
+// equality - puzzler
+console.log("puzzler");
+console.log(0 == false); // t
+console.log(0 === false); // f
+console.log("" == false); // t
+console.log("" === false); // f
+console.log(null == undefined); //f xxx => t!!
+console.log(null === undefined); //f
