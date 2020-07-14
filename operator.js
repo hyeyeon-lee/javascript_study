@@ -108,3 +108,40 @@ console.log("" == false); // t
 console.log("" === false); // f
 console.log(null == undefined); //f xxx => t!!
 console.log(null === undefined); //f
+
+// 8. Conditional operators: if
+// if, else if, else
+const name = "hyeyeon";
+if (name === "hyeyeon") {
+  console.log("hi, hyeyeon");
+} else if (name === "jiyeon") {
+  console.log("no...");
+} else {
+  console.log("who are you?");
+}
+
+// 9. Ternary operator: ?
+// condition ? value1 : value2;
+// 간단할 때만 쓰기
+console.log(name === "hyeyeon" ? "yes" : "no");
+
+// 10. Switch statement
+// use for multiple if checks
+// use for enum-like value check
+// use for multiple type checks in TS
+const browser = "Firefox";
+switch (browser) {
+  case "IE":
+    console.log("go away");
+    break;
+  case "Chrome":
+  // console.log("love you");
+  // break;
+  // 같을땐 케이스 두개 다 그냥 써주면 됨
+  case "Firefox":
+    console.log("love you!");
+    break;
+  default:
+    console.log("same all!");
+    break;
+}
