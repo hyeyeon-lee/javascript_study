@@ -21,3 +21,6 @@
 - object
 
 5. dynamic typing
+
+6. operator
+
