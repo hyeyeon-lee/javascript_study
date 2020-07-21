@@ -24,3 +24,14 @@
 
 6. operator
 
+- String concatenation
+- Numeric operator
+- Increment and decrement operator
+- Assignment operators
+- Comparison Operators
+- Logical operators
+- Equality
+- Conditional operators
+- Ternary operator
+- Switch statement
+- Loops
