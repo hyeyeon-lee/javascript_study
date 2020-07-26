@@ -35,3 +35,5 @@
 - Ternary operator
 - Switch statement
 - Loops
+
+7. function
