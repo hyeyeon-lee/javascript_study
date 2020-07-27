@@ -30,3 +30,26 @@ function log(message: string): number {
   return 0;
 }
  */
+
+// 2. Parameters
+// premitive parameters: passed by value
+// object parameters: passed by reference
+function changeName(obj) {
+  obj.name = "coder";
+}
+
+const hyeyeon = { name: "hyeyeon" };
+changeName(hyeyeon);
+console.log(hyeyeon);
+
+// 3. Default parameters (added in ES6)
+function showMessage(message, from = "zz") {
+  /*  
+  if (from === undefined) {
+    from = "unknown";
+  }
+  */
+
+  console.log(`${message} by ${from}`);
+}
+showMessage("Hi!!!!");
