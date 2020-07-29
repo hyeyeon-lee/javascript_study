@@ -37,3 +37,7 @@
 - Loops
 
 7. function
+
+- Function declaration
+- Parameters
+- Default parameters
