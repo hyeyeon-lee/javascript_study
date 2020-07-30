@@ -53,3 +53,34 @@ function showMessage(message, from = "zz") {
   console.log(`${message} by ${from}`);
 }
 showMessage("Hi!!!!");
+
+// 4. Rest parameters (added in ES6)
+// arg = 세개가 들어있는 배열
+function printAll(...args) {
+  for (let i = 0; i < args.length; i++) {
+    console.log(args[i]);
+  }
+
+  for (const arg of args) {
+    console.log(arg);
+  }
+
+  args.forEach((arg) => console.log(arg));
+}
+printAll("dream", "coding", "hyeyeon");
+
+// 5. Local scope
+// 안에서는 밖을 볼 수 있지만 밖에서는 안을 볼 수 없다.
+let globalMessage = "global"; //global variable
+function printMessage() {
+  let message = "hello";
+  console.log(message); // local variable
+  console.log(globalMessage);
+  function printAnother() {
+    console.log(message);
+    let childMessage = "hello";
+  }
+  console.log(childMessage);
+}
+printMessage();
+//console.log(message); // boom
