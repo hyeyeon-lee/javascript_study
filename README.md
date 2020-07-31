@@ -41,3 +41,5 @@
 - Function declaration
 - Parameters
 - Default parameters
+- Rest parameters
+- Local scope
