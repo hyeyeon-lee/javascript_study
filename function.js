@@ -80,7 +80,81 @@ function printMessage() {
     console.log(message);
     let childMessage = "hello";
   }
-  console.log(childMessage);
+  //console.log(childMessage);
+  // return 타입이 없다 ===
+  // return undefined; (생략 가능)
 }
 printMessage();
 //console.log(message); // boom
+
+// 6. Return a value
+function sum(a, b) {
+  return a + b;
+}
+const result = sum(1, 2); //3
+console.log(`sum: ${sum(1, 2)}`);
+
+// 7. Early return, early exit
+// bad
+function upgradeUser(user) {
+  if (user.point > 10) {
+    // long upgrade logic...
+  }
+}
+
+// good
+function upgradeUser(user) {
+  if (user.point <= 10) {
+    return;
+  }
+  // long upgrade logic...
+}
+
+// First-class function
+// functions are treated like any other variable
+// can be assigned as a value to variable
+// can be passed as an argument to other functions.
+// can be returned by another function
+
+// 1. Function expresstion
+// a function declaration can be called earlier than it is defined. (hoisted)
+// a function expression is created when the excution reaches it.
+
+const print = function () {
+  // anonymous function
+  console.log("print");
+};
+/* const print = function print() {
+  // named function
+  console.log("print");
+}; */
+
+print();
+const printAgain = print;
+printAll();
+const sumAgain = sum;
+console.log(sumAgain(1, 3));
+
+// 2. Callback function using function expression
+// 함수를 전달해서 상황에 맞는 함수 사용(yes, no)
+function randomQuiz(answer, printYes, printNo) {
+  if (answer === "love you") {
+    printYes();
+  } else {
+    printNo();
+  }
+}
+
+// anonymous function
+const printYes = function () {
+  console.log("yes!");
+};
+
+// named function
+// better debugging in debugger's stack traces
+const printNo = function print() {
+  console.log("no!");
+  //print(); //recursions 재귀, 피보나치, 반복되는 평균 등
+};
+randomQuiz("wrong", printYes, printNo);
+randomQuiz("love you", printYes, printNo);
