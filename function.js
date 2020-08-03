@@ -158,3 +158,53 @@ const printNo = function print() {
 };
 randomQuiz("wrong", printYes, printNo);
 randomQuiz("love you", printYes, printNo);
+
+// Arrow function
+// always anonymous
+/* 
+const simplePrint = function () {
+  console.log("simplePrint!");
+};
+ */
+const simplePrint = () => console.log("simplePrint!");
+const add = (a, b) => a + b;
+const simpleMultiply = (a, b) => {
+  // do something more
+  return a * b;
+};
+
+// IIFE: Immediately Invoked Function Expression
+// 함수 바로 실행
+function hello() {
+  console.log("IIFE");
+}
+
+hello();
+// ===
+(function hello() {
+  console.log("IIFE");
+})();
+
+// Fun quiz time
+// function calculate(command, a, b)
+// command: add, subtract, divide, multiply, remainder
+
+function calculate(command, a, b) {
+  switch (command) {
+    case "add":
+      return a + b;
+      break;
+    case "subtract":
+      return a - b;
+      break;
+    case "divide":
+      return a / b;
+      break;
+    case "multiply":
+      return a * b;
+      break;
+    case "remainder":
+      return a % b;
+      break;
+  }
+}
