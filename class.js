@@ -52,3 +52,36 @@ class User {
 
 const user1 = new User("Steve", "Job", -1);
 console.log(user1.age);
+
+// 3. Fields (public, private)
+// Too soon!
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+class Experiment {
+  publicField = 2;
+  #privateField = 0;
+}
+
+const experiment = new Experiment();
+console.log(experiment.publicField); // 2
+console.log(experiment.privateField); // undefined
+
+// 4. Static properties and methods
+// Too soon!
+// 클래스가 가지고 있는 고유한 값, 데이터에 상관없이 동일하게 사용되는 메소드
+// object마다가 아니라 class 자체에 가지고 있음
+// 들어오는 데이터에 상관없이 공통적으로 사용하는 메소드의 경우 static
+class Article {
+  static publisher = "Dream Coding";
+  constructor(articleNumber) {
+    this.articleNumber = articleNumber;
+  }
+
+  static printPublisher() {
+    console.log(Article.publisher);
+  }
+}
+
+const article1 = new Article(1);
+const article2 = new Article(2);
+console.log(article1.publisher); // undefined
+Article.printPublisher();
