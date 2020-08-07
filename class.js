@@ -85,3 +85,51 @@ const article1 = new Article(1);
 const article2 = new Article(2);
 console.log(article1.publisher); // undefined
 Article.printPublisher();
+
+// 5. Inheritance
+// a way for one class to extend another class.
+class Shape {
+  constructor(width, height, color) {
+    this.width = width;
+    this.height = height;
+    this.color = color;
+  }
+
+  draw() {
+    console.log(`drawing ${this.color} color !!!!`);
+  }
+
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
+class Rectangle extends Shape {}
+class Triangle extends Shape {
+  draw() {
+    super.draw();
+    console.log(`...good ${this.color} triangle`);
+  }
+  getArea() {
+    return (this.width * this.height) / 2;
+  }
+  toString() {
+    return `Triangle: color: ${this.color}`;
+  }
+}
+
+const rectangle = new Rectangle(20, 20, "blue");
+rectangle.draw();
+console.log(rectangle.getArea());
+const triangle = new Triangle(20, 20, "gray");
+triangle.draw();
+console.log(triangle.getArea());
+
+// 6. Class checking: instanceOf
+// A instanceOf B = A가 B 클래스로 만들어진 인스턴스인지 체크
+console.log(rectangle instanceof Rectangle);
+console.log(triangle instanceof Rectangle);
+console.log(triangle instanceof Triangle);
+console.log(triangle instanceof Shape);
+console.log(triangle instanceof Object); // 모든 클래스의 상위
+console.log(triangle.toString());
