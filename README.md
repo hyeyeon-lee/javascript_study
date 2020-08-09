@@ -43,3 +43,7 @@
 - Default parameters
 - Rest parameters
 - Local scope
+
+8. class
+
+- constructor
