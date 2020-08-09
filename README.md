@@ -46,4 +46,9 @@
 
 8. class
 
-- constructor
+- Class declarations
+- Getter and Setter
+- Fields (public, private)
+- Static properties and methods
+- Inheritance
+- Class checking: instanceOf
