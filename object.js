@@ -65,3 +65,40 @@ function printValue(obj, key) {
 }
 printValue(hyeyeon, "name");
 printValue(hyeyeon, "age");
+
+// 3. Property value shorthand
+const person1 = { name: "bob", age: 2 };
+const person2 = { name: "steve", age: 3 };
+const person3 = { name: "dave", age: 6 };
+// const person4 = {name: ''};
+const person4 = makePerson("hyeyeon", 24);
+
+function makePerson(name, age) {
+  /* return {
+    name: name,
+    age: age,
+  }; */
+
+  return {
+    name,
+    age,
+  };
+}
+console.log(person4);
+
+// object를 필요할 때마다 일일히 만들면
+// 불가피하게 동일한 키와 값을 계속 반복해서 작성해야 한다
+// => 함수를 이용하여 값을 전달(makePerson)
+// class와 비슷한 역할(template), 이전 class가 없을 때 이런 식으로 사용
+
+// 4. Constructor function
+// 순수하게 object를 생성하는 함수의 경우 makePerson보다 아래와 같이 작성
+// class constructor 와 유사
+function Person(name, age) {
+  // this = {};
+  this.name = name;
+  this.age = age;
+  // return this;
+}
+
+const person5 = new Person("hyeyeon", 44);
