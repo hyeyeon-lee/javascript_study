@@ -52,3 +52,10 @@
 - Static properties and methods
 - Inheritance
 - Class checking: instanceOf
+
+9. object 
+
+- Literals and properties
+- Computed properties
+- Property value shorthand
+- Constructor function
