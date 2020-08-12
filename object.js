@@ -102,3 +102,9 @@ function Person(name, age) {
 }
 
 const person5 = new Person("hyeyeon", 44);
+
+// 5. in operator: property existence check (key in obj)
+console.log('name' in hyeyeon);
+console.log('age' in hyeyeon);
+console.log('random' in hyeyeon);
+console.log(hyeyeon.random);
