@@ -104,7 +104,54 @@ function Person(name, age) {
 const person5 = new Person("hyeyeon", 44);
 
 // 5. in operator: property existence check (key in obj)
-console.log('name' in hyeyeon);
-console.log('age' in hyeyeon);
-console.log('random' in hyeyeon);
+console.log("name" in hyeyeon);
+console.log("age" in hyeyeon);
+console.log("random" in hyeyeon);
 console.log(hyeyeon.random);
+
+// 6. for..in vs for..of
+// for (key in obj)
+console.clear();
+
+for (key in hyeyeon) {
+  console.log(key);
+}
+
+// for (value of iterable)
+const array = [1, 2, 3, 4, 5];
+/* 
+for (let i = 0; i < array.length; i++) {
+  console.log(array[i]);
+}
+ */
+for (value of array) {
+  console.log(value);
+}
+
+// 7. Fun cloning
+// Object.assign(dest, [obj1, obj2, obj3]){
+const user = { name: "hyeyeon", age: "23" };
+const user2 = user;
+
+user2.name = "coder";
+console.log(user.name);
+// user2의 name을 변경했음에도 user.name도 변경됨
+// 같은 ref 참조하고 있어서
+
+console.clear();
+
+// old way
+const user3 = {};
+for (key in user) {
+  user3[key] = user[key];
+}
+console.log(user3);
+
+// new way
+/* 
+const user4 = {};
+Object.assign(user4, user);
+아래와 동일
+ */
+const user4 = Object.assign({}, user);
+console.log(user4);
