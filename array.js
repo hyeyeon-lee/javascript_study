@@ -39,3 +39,42 @@ fruits.forEach(() => {
 
 fruits.forEach((value) => console.log(value));
 fruits.forEach((value, index) => console.log(value, index));
+
+// 4. Addition, deletion, copy
+// push: add an item to the end
+fruits.push("🍓", "🍑");
+console.log(fruits);
+
+// pop: remove an item from the end
+fruits.pop();
+fruits.pop();
+console.log(fruits);
+
+// unshift: add an item to the beginning
+fruits.unshift("🍓", "🍋");
+console.log(fruits);
+
+// shift: remove an item from the beginning
+fruits.shift();
+fruits.shift();
+console.log(fruits);
+
+// note!! shift, unshift are slower than pop, push
+// 당겨오고 밀어주는 일을 해야 하기 때문에 사용 지양!
+// 중간에 빼고 넣는 것은 index를 사용하기 때문에 나름 빠름
+// 전체 배열을 건드리는 경우가 느림 shift, unshift
+
+// splice: remove an item by index position
+fruits.push("🍕", "🍔", "🍟");
+console.log(fruits);
+
+fruits.splice(1, 1);
+// fruits.splice(1); // index만 지정하고 개수를 지정하지 않으면 그 이후로 다 지움
+console.log(fruits);
+fruits.splice(1, 1, "🥨", "🥐");
+console.log(fruits);
+
+// combine two arrays
+const fruits2 = ["🍒", "🍇"];
+const newFruits = fruits.concat(fruits2);
+console.log(newFruits);
