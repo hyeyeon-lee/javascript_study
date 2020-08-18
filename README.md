@@ -53,9 +53,12 @@
 - Inheritance
 - Class checking: instanceOf
 
-9. object 
+9. object
 
 - Literals and properties
 - Computed properties
 - Property value shorthand
 - Constructor function
+- in operator: property existence check (key in obj)
+- for..in vs for..of
+- Fun cloning
