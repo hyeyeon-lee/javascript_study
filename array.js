@@ -78,3 +78,22 @@ console.log(fruits);
 const fruits2 = ["🍒", "🍇"];
 const newFruits = fruits.concat(fruits2);
 console.log(newFruits);
+
+// 5. Searching
+// indexOf: find the index
+console.clear();
+console.log(fruits);
+console.log(fruits.indexOf("🍎"));
+console.log(fruits.indexOf("🍟"));
+console.log(fruits.indexOf("🍳"));
+
+// includes
+console.log(fruits.includes("🍟"));
+console.log(fruits.includes("🍳"));
+
+// lastIndexOf
+console.clear();
+fruits.push("🍎");
+console.log(fruits);
+console.log(fruits.indexOf("🍎"));
+console.log(fruits.lastIndexOf("🍎"));
