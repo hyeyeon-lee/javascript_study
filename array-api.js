@@ -76,18 +76,35 @@ const students = [
 
 // Q8. check if there is a student with the score lower than 50
 {
+  // 배열에서 조건에 맞는 것 찾기
+  const result = students.some((student) => student.score < 50); // 배열 어떤 요소 하나라도
+  console.log(result);
+
+  const result2 = !students.every((student) => student.score >= 50); // 배열 모든 요소
+  console.log(result2);
 }
 
 // Q9. compute students' average score
 {
+  // reduce: 모든 배열을 돌면서 값을 누적할 때
+  // reduceRight: 배열의 맨 뒤부터
+  const result = students.reduce((prev, curr) => prev + curr.score, 0); // initial 0 == prev
+  console.log(result / students.length);
 }
 
 // Q10. make a string containing all the scores
 // result should be: '45, 80, 90, 66, 88'
 {
+  const result = students.map((student) => student.score).join(", ");
+  console.log(result);
 }
 
 // Bonus! do Q10 sorted in ascending order
 // result should be: '45, 66, 80, 88, 90'
 {
+  const result = students
+    .map((student) => student.score)
+    .sort((a, b) => a - b)
+    .join(", ");
+  console.log(result);
 }
