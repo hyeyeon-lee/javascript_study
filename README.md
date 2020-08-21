@@ -62,3 +62,11 @@
 - in operator: property existence check (key in obj)
 - for..in vs for..of
 - Fun cloning
+
+10. array
+
+- Declaration
+- Index position
+- Looping over an array
+- Addition, deletion, copy
+- Searching
