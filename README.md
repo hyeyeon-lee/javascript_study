@@ -70,3 +70,16 @@
 - Looping over an array
 - Addition, deletion, copy
 - Searching
+
+11. array api
+
+- join
+- split
+- reverse
+- slice
+- find
+- filter
+- map
+- some, every
+- reduce
+- 체인
