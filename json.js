@@ -37,3 +37,19 @@ console.log(json);
 
 // 2. JSON to Object
 // parse(json)
+console.clear();
+json = JSON.stringify(rabbit);
+console.log(json);
+const obj = JSON.parse(json, (key, value) => {
+  console.log(`key: ${key}, value: ${value} `);
+  return key === "birthDate" ? new Date(value) : value;
+});
+console.log(obj);
+rabbit.jump();
+// obj.jump();
+// json으로 변경 시 function, symbol은 사라지기 때문에
+// 다시 obj로 변경했을 때 function, symbol이 없음
+console.log(rabbit.birthDate.getDate());
+// birthdate가 string으로 변환됐다가 obj로 돌아왔기 때문에
+// string.getDate() 사용 불가
+console.log(obj.birthDate.getDate());
