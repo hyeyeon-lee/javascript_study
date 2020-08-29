@@ -9,7 +9,19 @@
 // callback function: 전달해준 함수를 나중에 불러줘
 
 console.log("1");
-setTimeout(function () {
+setTimeout(() => {
   console.log("2");
 }, 1000); // 브라우저에게 요청(browser api)
 console.log("3");
+
+// Synchronous callback (동기)
+function printImmediately(print) {
+  print();
+}
+printImmediately(() => console.log("hello"));
+
+// Asychronoous callback (비동기)
+function printWithDelay(print, timeout) {
+  setTimeout(print, timeout);
+}
+printWithDelay(() => console.log("async callback"), 2000);
