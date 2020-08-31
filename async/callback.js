@@ -50,3 +50,30 @@ class UserStorage {
     });
   }
 }
+
+const userStorage = new UserStorage();
+const id = prompt("enter your id");
+const password = prompt("enter your password");
+
+userStorage.loginUser(
+  id,
+  password,
+  (user) => {
+    userStorage.getRoles(
+      user,
+      (userWithRole) => {
+        alert(
+          `Hello ${userWithRole.name}, you have a ${userWithRole.role} role`
+        );
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  },
+  (error) => {
+    console.log(error);
+  }
+);
+
+// callback hell => 가독성이 떨어지고 연관관계, 비즈니스 로직을 한눈에 이해하기 어렵다
