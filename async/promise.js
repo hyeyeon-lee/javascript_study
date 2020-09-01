@@ -1,0 +1,33 @@
+"use strict";
+
+// Promise is a Javascript object for asynchronous operation.
+// keyword: state, producer/consumer
+// state: pending(수행중), -> fullfilled(성공) or rejected(실패)
+// Producer vs Consumer
+
+// 1. Producer
+const promise = new Promise((resolve, reject) => {
+  // doing some heavy work(network, read files...)
+  // 네트워크에서 데이터를 받아오거나, 큰 파일을 읽기 등...
+  // 시간이 걸리는 일은 비동기
+  console.log("doing something...");
+  // promise가 만들어진 순간 executor가 바로 실행되는 것을 알 수 있음
+  // 유의점
+  // when new Promise is created, the executor runs automatically.
+  setTimeout(() => {
+    // resolve("hyeyeon");
+    reject(new Error("no network"));
+  }, 2000);
+});
+
+// 2. Consumer: then, catch, finally
+promise
+  .then((value) => {
+    // then: promise가 정상적으로 수행됐을 때 resolve의 파라미터를 받아서 표시
+    // then return promise
+    console.log(value);
+  })
+  .catch((error) => {
+    // chaining
+    console.log(error);
+  });
