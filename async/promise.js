@@ -15,8 +15,8 @@ const promise = new Promise((resolve, reject) => {
   // 유의점
   // when new Promise is created, the executor runs automatically.
   setTimeout(() => {
-    // resolve("hyeyeon");
-    reject(new Error("no network"));
+    resolve("hyeyeon");
+    // reject(new Error("no network"));
   }, 2000);
 });
 
@@ -30,4 +30,23 @@ promise
   .catch((error) => {
     // chaining
     console.log(error);
+  }).finally(() => {
+	  //성공 실패 상관 없이 실행됨
+	  console.log('finally')
   });
+
+// 3. Promise chaining
+const fetchNumber = new Promise((resolve, reject) => {
+  setTimeout(()=> resolve(1), 1000);
+});
+
+fetchNumber
+.then(num => num * 2)
+.then(num => num * 3)
+.then(num => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(num-1), 1000);
+  });
+})
+.then(num => console.log(num));
+  
