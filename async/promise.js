@@ -30,41 +30,42 @@ promise
   .catch((error) => {
     // chaining
     console.log(error);
-  }).finally(() => {
-	  //성공 실패 상관 없이 실행됨
-	  console.log('finally')
+  })
+  .finally(() => {
+    //성공 실패 상관 없이 실행됨
+    console.log("finally");
   });
 
 // 3. Promise chaining
 const fetchNumber = new Promise((resolve, reject) => {
-  setTimeout(()=> resolve(1), 1000);
+  setTimeout(() => resolve(1), 1000);
 });
 
 fetchNumber
-.then(num => num * 2)
-.then(num => num * 3)
-.then(num => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => resolve(num-1), 1000);
-  });
-})
-.then(num => console.log(num));
+  .then((num) => num * 2)
+  .then((num) => num * 3)
+  .then((num) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => resolve(num - 1), 1000);
+    });
+  })
+  .then((num) => console.log(num));
 
 // 4. Error Handling
-const getHen = () => 
+const getHen = () =>
   new Promise((resolve, reject) => {
-    setTimeout(() => resolve('닭'), 1000);
+    setTimeout(() => resolve("🐓"), 1000);
   });
 
-const getEgg = hen => 
+const getEgg = (hen) =>
   new Promise((resolve, reject) => {
     //setTimeout(() => resolve(`${hen} => 알`), 1000);
-    setTimeout(() => reject(new Error(`error! ${hen} => 알`)), 1000);
+    setTimeout(() => reject(new Error(`error! ${hen} => 🥚`)), 1000);
   });
 
-const cook = egg => 
+const cook = (egg) =>
   new Promise((resolve, reject) => {
-    setTimeout(() => resolve(`${egg} => 프라이`), 1000);
+    setTimeout(() => resolve(`${egg} => 🍳`), 1000);
   });
 
 /* getHen()
@@ -76,13 +77,10 @@ const cook = egg =>
 // 생략 가능
 getHen() //
   .then(getEgg)
-  .catch(error => {
+  .catch((error) => {
     // promise chain이 실패하는 것을 막음
-    return '빵'; 
+    return "🥨";
   })
   .then(cook)
   .then(console.log)
   .catch(console.log);
-
-
-  
