@@ -32,14 +32,7 @@ const password = prompt("enter your password");
 
 userStorage
   .loginUser(id, password)
-  .then((user) => {
-    userStorage
-      .getRoles(user)
-      .then((userWithRole) => {
-        alert(
-          `Hello ${userWithRole.name}, you have a ${userWithRole.role} role`
-        );
-      })
-      .catch(console.log);
-  })
+  .then(userStorage.getRoles)
+  .then((user) => alert(`Hello ${user.name}, you have a ${user.role} role`))
+  .catch(console.log)
   .catch(console.log);
