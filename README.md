@@ -88,3 +88,16 @@
 
 - Object to JSON
 - JSON to Object
+
+13. callback
+
+- synchronous / asynchronous
+- callback hell
+
+14. promise
+
+- promise 생성하기
+- promise 사용하기
+- promise chaining
+- error handling
+- callback hell -> promise
