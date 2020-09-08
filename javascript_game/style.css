@@ -1,0 +1,51 @@
+body {
+  margin-top: 80px;
+  background: rgb(32, 32, 32);
+}
+
+div {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+div.category * {
+  vertical-align: middle;
+  margin: 3px;
+}
+div.category img {
+  display: inline-block;
+  width: 40px;
+}
+p.color-box {
+  padding: 8px;
+  display: inline-block;
+}
+p.blue {
+  background-color: rgb(56, 56, 255);
+}
+p.pink {
+  background-color: rgb(255, 75, 105);
+}
+p.yellow {
+  background-color: rgb(219, 179, 0);
+}
+
+#clothes {
+  margin-top: 40px;
+}
+.item {
+  background-color: white;
+  width: 100%;
+  text-align: start;
+  padding: 5px 20px;
+  border-radius: 3px;
+  margin: 10px;
+}
+.item img {
+  width: 40px;
+  float: left;
+}
+.item p {
+  padding-left: 50px;
+}

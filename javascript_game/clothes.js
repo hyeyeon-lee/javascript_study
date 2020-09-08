@@ -1,0 +1,98 @@
+const data = [
+  {
+    gender: "female",
+    size: "large",
+    color: "pink",
+    image: "pink_t.png",
+  },
+  {
+    gender: "man",
+    size: "small",
+    color: "blue",
+    image: "blue_p.png",
+  },
+  {
+    gender: "man",
+    size: "large",
+    color: "yellow",
+    image: "yellow_p.png",
+  },
+  {
+    gender: "man",
+    size: "large",
+    color: "yellow",
+    image: "yellow_s.png",
+  },
+  {
+    gender: "female",
+    size: "small",
+    color: "blue",
+    image: "blue_s.png",
+  },
+  {
+    gender: "male",
+    size: "large",
+    color: "blue",
+    image: "blue_t.png",
+  },
+  {
+    gender: "male",
+    size: "large",
+    color: "yellow",
+    image: "yellow_t.png",
+  },
+  {
+    gender: "female",
+    size: "small",
+    color: "pink",
+    image: "pink_p.png",
+  },
+  {
+    gender: "female",
+    size: "large",
+    color: "pink",
+    image: "pink_t.png",
+  },
+  {
+    gender: "man",
+    size: "small",
+    color: "blue",
+    image: "blue_p.png",
+  },
+  {
+    gender: "man",
+    size: "large",
+    color: "yellow",
+    image: "yellow_p.png",
+  },
+  {
+    gender: "man",
+    size: "large",
+    color: "yellow",
+    image: "yellow_s.png",
+  },
+  {
+    gender: "female",
+    size: "small",
+    color: "blue",
+    image: "blue_s.png",
+  },
+  {
+    gender: "male",
+    size: "large",
+    color: "blue",
+    image: "blue_t.png",
+  },
+  {
+    gender: "male",
+    size: "large",
+    color: "yellow",
+    image: "yellow_t.png",
+  },
+  {
+    gender: "female",
+    size: "small",
+    color: "pink",
+    image: "pink_p.png",
+  },
+];
