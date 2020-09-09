@@ -12,6 +12,7 @@ div {
 div.category * {
   vertical-align: middle;
   margin: 3px;
+  cursor: pointer;
 }
 div.category img {
   display: inline-block;
@@ -21,13 +22,13 @@ p.color-box {
   padding: 8px;
   display: inline-block;
 }
-p.blue {
+p#blue {
   background-color: rgb(56, 56, 255);
 }
-p.pink {
+p#pink {
   background-color: rgb(255, 75, 105);
 }
-p.yellow {
+p#yellow {
   background-color: rgb(219, 179, 0);
 }
 
