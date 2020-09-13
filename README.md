@@ -101,3 +101,11 @@
 - promise chaining
 - error handling
 - callback hell -> promise
+
+15. async & await
+
+- async
+- await
+- promise api(all, race)
+
+16. 미니게임
