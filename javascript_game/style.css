@@ -1,6 +1,36 @@
+/*  feedback 3: 
+공통적으로 쓰이는 color, size는 변수로 선언
+유지보수에도 용이하고 찾기도 쉬움
+ */
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blud: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+
+  /* size */
+  --size-button: 60px;
+
+  /* annimation */
+  --annimation-duration: 300ms;
+}
+
 body {
   margin-top: 80px;
-  background: rgb(32, 32, 32);
+  /* background: rgb(32, 32, 32); */
+  /* 변수 사용 예제 */
+  background-color: var(--color-black);
+  /* 
+    flex박스 사용해보기
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  */
 }
 
 div {
@@ -9,10 +39,27 @@ div {
   text-align: center;
 }
 
+/* hover 효과 주기 */
+.logo,
+div.category * {
+  cursor: pointer;
+  transition: transform var(--annimation-duration) ease;
+}
+.logo:hover,
+div.category *:hover {
+  transform: scale(1.1);
+}
+
 div.category * {
   vertical-align: middle;
   margin: 3px;
   cursor: pointer;
+
+  /* btn 태그를 사용해서 만들었을 경우
+    background-color: transparent; (투명하게)
+    border: none; (못생기게 남은 border 삭제)
+    outline: none; (삭제)
+  */
 }
 div.category img {
   display: inline-block;
