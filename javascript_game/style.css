@@ -12,7 +12,11 @@
   --color-light-grey: #dfdfdf;
 
   /* size */
+  --base-space: 8px;
   --size-button: 60px;
+  --size-border: 4px;
+  --button-font-size: 18px;
+  --size-thumbnail: 50px;
 
   /* annimation */
   --annimation-duration: 300ms;
@@ -66,33 +70,37 @@ div.category img {
   width: 40px;
 }
 p.color-box {
-  padding: 8px;
+  padding: calc(var(--base-space) * 1);
+  border-radius: var(--size-border);
   display: inline-block;
+  font-size: var(--button-font-size);
 }
 p#blue {
-  background-color: rgb(56, 56, 255);
+  background-color: var(--color-blud);
 }
 p#pink {
-  background-color: rgb(255, 75, 105);
+  background-color: var(--color-pink);
 }
 p#yellow {
-  background-color: rgb(219, 179, 0);
+  background-color: var(--color-yellow);
 }
 
 #clothes {
   margin-top: 40px;
+  width: 60%;
+  height: 60%;
 }
 .item {
-  background-color: white;
-  width: 100%;
-  text-align: start;
+  background-color: var(--color-white);
   padding: 5px 20px;
-  border-radius: 3px;
-  margin: 10px;
+  border-radius: var(--size-border);
+  margin-bottom: var(--base-space);
+  display: flex;
+  align-items: center;
 }
 .item img {
-  width: 40px;
-  float: left;
+  width: var(--size-thumbnail);
+  height: var(--size-thumbnail);
 }
 .item p {
   padding-left: 50px;

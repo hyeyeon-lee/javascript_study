@@ -1,3 +1,6 @@
+// feedback 4:
+// 자바스크립트 = application의 비즈니스 로직 담당
+// 데이터가 함께 있으면 좋지 않음 => data.json
 const data = [
   {
     gender: "female",

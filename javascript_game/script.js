@@ -1,6 +1,40 @@
 "use strict"; // es5로 엄격하게 해주세요
 
-let clothes = data;
+// feedback 5: promise 이용해보기
+
+// Fetch the items from the JSON file
+// feedback 6: json 파일 가져오기
+function loadItems() {
+  return fetch("../data/data.json")
+    .then((response) => response.json())
+    .then((json) => json.items);
+}
+
+// 기존 setData와 비슷한 html 변경 함수
+// Update the list with given items
+function displayItems(items) {
+  const clothesDiv = document.querySelector("#clothes");
+  clothesDiv.innerHTML = items.map((item) => createHTMLString(item)).join("");
+}
+
+// Create HTML list item from the given data item
+// feedback 7: 이전 append 방식보다 훨씬 보기 좋음
+function createHTMLString(item) {
+  return `
+  <div class="item">
+    <img src="imgs/${item.image}" alt="${item.type}" />
+    <p>${item.gender}, ${item.size} size</p>
+  </div>`;
+}
+
+loadItems()
+  .then((items) => {
+    displayItems(items);
+    //setEventListener(items);
+  })
+  .catch(console.log);
+
+/* let clothes = data;
 setData(clothes);
 
 function setData(data) {
@@ -47,3 +81,4 @@ function sortClothes(e) {
 
   setData(result);
 }
+ */
