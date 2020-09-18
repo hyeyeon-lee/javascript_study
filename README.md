@@ -109,3 +109,11 @@
 - promise api(all, race)
 
 16. 미니게임
+
+- feedback 1: 불필요한 div wrap
+- feedback 2: html 태그 좀더 제대로 사용하기 div p 말고 button, ul등을 사용했으면 더 좋음
+- feedback 3: 공통적으로 쓰이는 color, size는 변수로 선언/유지보수에도 용이하고 찾기도 쉬움
+- feedback 4: 자바스크립트 = application의 비즈니스 로직 담당으로 데이터가 함께 있으면 좋지 않음 => data.json 분리
+- feedback 5: promise 이용해보기
+- feedback 6: json 파일 가져오기
+- feedback 7: 이전 append 방식보다 훨씬 보기 좋음 => createHTMLString 함수 분리
