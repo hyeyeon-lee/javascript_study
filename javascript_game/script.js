@@ -27,10 +27,51 @@ function createHTMLString(item) {
   </div>`;
 }
 
+function setEventListeners(items) {
+  const logo = document.querySelector(".logo");
+  // 이벤트 위임을 위한 상위 선택
+  // feedback 9: 이벤트 위임을 사용
+  const buttons = document.querySelector(".category");
+  logo.addEventListener("click", () => displayItems(items));
+  buttons.addEventListener("click", (event) => onButtonClick(event, items));
+}
+
+function onButtonClick(event, items) {
+  const dataset = event.target.dataset;
+  const key = dataset.key;
+  const value = dataset.value;
+  //console.log(event.target.dataset.key);
+  //console.log(event.target.dataset.value);
+
+  if (key == null || value == null) {
+    return;
+  }
+
+  const filtered = items.filter((item) => item[key] === value);
+  //console.log(filtered);
+  displayItems(filtered);
+  // but, filtered 부분의 단점
+  // 버튼이 클릭될 때마다 요소를 다시 만들어서 innerHTML 업데이트가 되어야 함
+  // 개선방법: class display 사용 hide/show
+  // updateItems(items, key, value);
+}
+
+/* function updateItems(items, key, value) {
+  items.forEach((item) => {
+    console.log(item);
+    if (item[key] === value) {
+      item.classList.remove("invisible");
+    } else {
+      item.classList.add("invisible");
+    }
+  }); 
+}*/
+
+// main
 loadItems()
   .then((items) => {
     displayItems(items);
-    //setEventListener(items);
+    setEventListeners(items);
   })
   .catch(console.log);
 

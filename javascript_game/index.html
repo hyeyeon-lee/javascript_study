@@ -17,12 +17,36 @@
     <!-- Buttons -->
     <!-- feedback 2: html 태그 좀더 제대로 사용하기 div p 말고 button을 사용했으면 더 좋음 -->
     <div class="category">
-      <img class="type" id="tshirt" src="imgs/blue_t.png" alt="티셔츠" />
-      <img class="type" id="pants" src="imgs/blue_p.png" alt="바지" />
-      <img class="type" id="skirt" src="imgs/blue_s.png" alt="치마" />
-      <p class="color-box" id="blue">Blue</p>
-      <p class="color-box" id="yellow">Yellow</p>
-      <p class="color-box" id="pink">Pink</p>
+      <!-- feedback 8: id, class만 이용하지 말고 custom property 이용하기(data-) -->
+      <img
+        class="type"
+        id="tshirt"
+        src="imgs/blue_t.png"
+        alt="티셔츠"
+        data-key="type"
+        data-value="tshirt"
+      />
+      <img
+        class="type"
+        id="pants"
+        src="imgs/blue_p.png"
+        alt="바지"
+        data-key="type"
+        data-value="pants"
+      />
+      <img
+        class="type"
+        id="skirt"
+        src="imgs/blue_s.png"
+        alt="치마"
+        data-key="type"
+        data-value="skirt"
+      />
+      <p class="color-box" id="blue" data-key="color" data-value="blue">Blue</p>
+      <p class="color-box" id="yellow" data-key="color" data-value="yellow">
+        Yellow
+      </p>
+      <p class="color-box" id="pink" data-key="color" data-value="pink">Pink</p>
     </div>
     <!-- Items -->
     <!-- feedback 2: html 태그 좀더 제대로 사용하기 div 말고 ul을 사용했으면 더 좋음 -->
