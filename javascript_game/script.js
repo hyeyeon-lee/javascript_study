@@ -100,7 +100,7 @@ function setData(data) {
     clothesDiv.appendChild(itemDiv);
   });
 }
-
+// feedback 10: 다른 배열을 만들어 할당할 것이 아니라면 배열은 const로! push/pop 가능함
 const category = document.querySelectorAll(".category *");
 category.forEach((item) => {
   item.addEventListener("click", sortClothes);

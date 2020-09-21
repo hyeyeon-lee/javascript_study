@@ -117,3 +117,10 @@
 - feedback 5: promise 이용해보기
 - feedback 6: json 파일 가져오기
 - feedback 7: 이전 append 방식보다 훨씬 보기 좋음 => createHTMLString 함수 분리
+- feedback 8: id, class만 이용하지 말고 custom property 이용하기(data-)
+- feedback 9: 이벤트 위임을 사용
+- feedback 10: 다른 배열을 만들어 할당할 것이 아니라면 배열은 const로! push/pop 가능함
+- feedback 11: dry, don't repeat yourself: 반복된 코드를 함수로, 너무 많은 기능을 하는 함수는 의미있는 그룹으로 추출!
+- feedback 12: Early exit: 너무 많은 중첩은 코드를 보기 힘들게 한다
+- feedback 13: 일관성 있는 코드 스타일 (case/querySelector...)
+- feedback 14: 직관적인 함수 이름
