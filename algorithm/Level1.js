@@ -31,3 +31,38 @@ function solution(x) {
 
   return answer;
 }
+
+// 크레인 인형뽑기 게임 (2021.02.09)
+function solution(board, moves) {
+  var answer = 0;
+  var result_arr = [];
+
+  for (var i = 0; i < moves.length; i++) {
+    var move = moves[i];
+    for (var j = 0; j < board.length; j++) {
+      var b = board[j];
+      if (b[move - 1] > 0) {
+        if (result_arr[result_arr.length - 1] == b[move - 1]) {
+          answer += 2;
+          result_arr.pop();
+        } else {
+          result_arr.push(b[move - 1]);
+        }
+        b.splice(move - 1, 1, 0);
+        break;
+      }
+    }
+  }
+
+  return answer;
+}
+
+// 두 정수 사이의 합 (2021.02.09)
+function solution(a, b) {
+  var answer = 0;
+  var bg = a > b ? a : b;
+  var sm = a + b - bg;
+
+  for (var i = sm; i <= bg; i++) answer += i;
+  return answer;
+}
