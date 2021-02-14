@@ -66,3 +66,29 @@ function solution(a, b) {
   for (var i = sm; i <= bg; i++) answer += i;
   return answer;
 }
+
+// 문자열 다루기 기본 (2021.02.14)
+function solution(s) {
+  var reg = new RegExp(/^\d{4}(\d{2})?$/, "i");
+  return reg.test(s);
+}
+
+// 수박수박수박수박수박수? (2021.02.14)
+function solution(n) {
+  var answer = "";
+  var arr = new Array(n);
+  answer = [...arr].map((item, idx) => (idx % 2 == 0 ? "수" : "박")).join("");
+  return answer;
+}
+
+// 같은 숫자는 싫어 (2021.02.14)
+function solution(arr) {
+  var answer = [];
+
+  answer = arr.reduce((acc, cur) => {
+    if (acc[acc.length - 1] !== cur) acc.push(cur);
+    return acc;
+  }, []);
+
+  return answer;
+}
