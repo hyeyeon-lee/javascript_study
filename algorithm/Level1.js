@@ -92,3 +92,7 @@ function solution(arr) {
 
   return answer;
 }
+// 문자열을 정수로 바꾸기 (2021.02.19)
+function solution(s) {
+    return Number(s);
+}
