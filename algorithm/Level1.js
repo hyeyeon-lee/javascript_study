@@ -94,5 +94,21 @@ function solution(arr) {
 }
 // 문자열을 정수로 바꾸기 (2021.02.19)
 function solution(s) {
-    return Number(s);
+  return Number(s);
+}
+
+// 두 개 뽑아서 더하기 (2021.03.05)
+function solution(numbers) {
+  var answer = [];
+
+  for (let i = 0; i <= numbers.length - 2; i++) {
+    for (let j = i + 1; j <= numbers.length - 1; j++) {
+      let sum = numbers[i] + numbers[j];
+      if (!answer.includes(sum)) answer.push(sum);
+    }
+  }
+
+  answer.sort((a, b) => a - b);
+
+  return answer;
 }
