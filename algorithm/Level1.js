@@ -112,3 +112,21 @@ function solution(numbers) {
 
   return answer;
 }
+
+// 신규 아이디 추천 (2021.03.07)
+function solution(new_id) {
+  var answer = new_id;
+
+  answer = new_id
+    .toLowerCase()
+    .replace(/[^a-z0-9-_.]/g, "")
+    .replace(/[.]+/g, ".")
+    .replace(/^\.|\.$/g, "")
+    .replace(/^$/g, "a")
+    .slice(0, 15)
+    .replace(/^\.|\.$/g, "");
+
+  answer = answer.padEnd(3, answer[answer.length - 1]);
+
+  return answer;
+}
