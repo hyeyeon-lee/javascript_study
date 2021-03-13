@@ -130,3 +130,39 @@ function solution(new_id) {
 
   return answer;
 }
+
+// 체육복 (2021.03.13)
+function solution(n, lost, reserve) {
+  var answer = n;
+
+  for (let i of [...reserve]) {
+    if (lost.includes(i)) {
+      lost.splice(lost.indexOf(i), 1);
+      reserve.splice(reserve.indexOf(i), 1);
+    }
+  }
+
+  answer = n - lost.length;
+
+  for (let i of lost) {
+    let front = i - 1;
+    let back = i + 1;
+
+    if (reserve.includes(i)) {
+      continue;
+    }
+
+    if (front > 0 && reserve.includes(front)) {
+      answer++;
+      reserve.splice(reserve.indexOf(front), 1);
+      continue;
+    }
+
+    if (reserve.includes(back) && back <= 30) {
+      answer++;
+      reserve.splice(reserve.indexOf(back), 1);
+      continue;
+    }
+  }
+  return answer;
+}
