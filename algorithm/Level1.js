@@ -178,3 +178,17 @@ function solution(s) {
     })
     .join("");
 }
+
+// 완주하지 못한 선수 (2021.05.16) - 효율성 검증 필요
+function solution(participant, completion) {
+  participant.sort();
+  completion.sort();
+
+  completion.forEach((item) => {
+    if (participant.indexOf(item) != -1) {
+      participant.splice(participant.indexOf(item), 1);
+    }
+  });
+
+  return participant[0];
+}
