@@ -184,11 +184,13 @@ function solution(participant, completion) {
   participant.sort();
   completion.sort();
 
-  completion.forEach((item) => {
-    if (participant.indexOf(item) != -1) {
-      participant.splice(participant.indexOf(item), 1);
+  for (var i = 0; i < completion.length; i++) {
+    if (participant[i] != completion[i]) {
+      answer = participant[i];
+      break;
     }
-  });
+  }
 
-  return participant[0];
+  if (answer != "") return answer;
+  else return participant[participant.length - 1];
 }
